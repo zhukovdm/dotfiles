@@ -1,0 +1,13 @@
+#!/bin/bash
+
+copy()
+{
+    cp -a "$PWD/$1/." "$HOME/$2/"
+}
+
+copy i3       .config/i3
+copy i3status .config/i3status
+copy vim      .vim
+copy zathura  .config/zathura
+
+cp bash/.bash_aliases ~/.bash_aliases
