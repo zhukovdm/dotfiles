@@ -1,0 +1,6 @@
+[submodule ".vim/pack/dracula/start/dracula"]
+	path = .vim/pack/dracula/start/dracula
+	url = https://github.com/dracula/vim.git
+[submodule "xfce4-terminal/dracula"]
+	path = xfce4-terminal/dracula
+	url = https://github.com/dracula/xfce4-terminal.git
