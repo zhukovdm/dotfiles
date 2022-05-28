@@ -1,0 +1,71 @@
+set nocompatible
+set hidden
+set visualbell
+set noerrorbells
+set t_vb=
+set title
+set titleold=
+set titlestring=%F
+set nobackup
+set noswapfile
+set ttyfast
+set showmatch
+set history=1000
+set lazyredraw
+set clipboard=unnamedplus
+set foldmethod=syntax
+set foldlevel=99
+set shortmess=I
+filetype plugin indent on
+set number
+set ruler
+set relativenumber
+set nowrap
+set colorcolumn=80
+set wildmenu
+set wildmode=list:longest,full
+set wildignore+=*.exe,*.gif,*.jpeg,*.jpg,*.o,*.pdf,*.png,*.pyc
+set mouse=a
+set cmdheight=1
+set showcmd
+set cursorline
+set laststatus=2
+set statusline=%<%f%y%m%r%=[%{&fileformat}]\ %v\ %l\:%L
+highlight ColorColumn ctermbg=7
+syntax enable
+set t_Co=256
+set backspace=indent,eol,start
+set confirm
+set encoding=utf-8
+set termencoding=utf-8
+set fileencoding=utf-8
+set autoindent
+set smarttab
+set listchars=eol:¬,tab:▸·,space:·
+"set list
+set ignorecase
+set incsearch
+set hlsearch
+set smartcase
+set splitbelow
+set viminfo+=n~/.vim/viminfo
+
+packadd! dracula
+let g:dracula_italic=0
+color dracula
+colorscheme dracula
+set termguicolors
+
+if has ("gui_running")
+  set guioptions-=T
+  set guioptions+=k
+  set guioptions-=r
+  set guioptions-=L
+  set guioptions-=m
+highlight Normal guibg=#fff4d4
+endif
+
+" netrw
+let g:netrw_banner=0
+let g:netrw_liststyle=3
+autocmd FileType netrw setl bufhidden=delete
