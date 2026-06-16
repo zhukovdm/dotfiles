@@ -1,5 +1,5 @@
 set $mod Mod4
-font pango:Cascadia Mono 10
+font pango:Fira Code Retina 10
 floating_modifier $mod
 
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit?' -b 'Yes' 'i3-msg exit'"
