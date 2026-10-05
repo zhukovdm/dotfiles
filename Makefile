@@ -1,37 +1,19 @@
-DOT_SRC := $$PWD
-
-CFG_DIR := .config
-CFG_TRG := ~/$(CFG_DIR)
-CFG_DIRS := i3 i3status zathura
-
-VIM_DIR := .vim
-VIM_TRG := ~/$(VIM_DIR)
-VIM_FILES := ~/.vimrc ~/.viminfo
-
-XFC_SRC := $(DOT_SRC)/xfce4-terminal/dracula
-XFC_TRG := ~/.local/share/xfce4/terminal/colorschemes
-XFC_THEME := Dracula.theme
-
 .PHONY: install
 
-install: install-config install-vim install-xfce4-terminal
+install: install-tmux install-vim install-xfce4-terminal install-zathura
 
-install-config:
-	mkdir -p $(CFG_TRG); \
-	for dir in $(CFG_DIRS); \
-	do \
-		target=$(CFG_TRG)/$$dir; \
-		if [ -d $$target ]; then rm -rf $$target; fi; \
-		ln -sf $(DOT_SRC)/$(CFG_DIR)/$$dir $$target; \
-	done
+install-tmux:
+	mkdir -p ~/.config/tmux/ && rm -rf ~/.config/tmux/; \
+	cp -r $(CURDIR)/.config/tmux/ ~/.config/tmux/
 
 install-vim:
-	rm -f $(VIM_FILES); \
-	if [ -d $(VIM_TRG) ]; then rm -rf $(VIM_TRG); fi; \
-	ln -sf $(DOT_SRC)/$(VIM_DIR) $(VIM_TRG)
+	mkdir -p ~/.vim && rm -rf ~/.vim/ ~/.viminfo ~/.vimrc; \
+	cp -r $(CURDIR)/.vim/ ~/.vim/
 
 install-xfce4-terminal:
-	mkdir -p $(XFC_TRG); \
-	target=$(XFC_TRG)/$(XFC_THEME); \
-	if [ -d $$target ]; then rm -rf $$target; fi; \
-	ln -sf $(XFC_SRC)/$(XFC_THEME) $$target
+	mkdir -p ~/.local/share/xfce4/terminal/colorschemes && touch ~/.local/share/xfce4/terminal/colorschemes/Dracula.theme; \
+	cp -r $(CURDIR)/xfce4-terminal/dracula/Dracula.theme ~/.local/share/xfce4/terminal/colorschemes/Dracula.theme
+
+install-zathura:
+	mkdir -p ~/.config/zathura/ && rm -rf ~/.config/zathura/; \
+	cp -r $(CURDIR)/.config/zathura/ ~/.config/zathura/
