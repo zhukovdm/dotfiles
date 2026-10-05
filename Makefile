@@ -11,8 +11,9 @@ install-vim:
 	cp -r $(CURDIR)/.vim/ ~/.vim/
 
 install-xfce4-terminal:
-	mkdir -p ~/.local/share/xfce4/terminal/colorschemes && touch ~/.local/share/xfce4/terminal/colorschemes/Dracula.theme; \
+	mkdir -p ~/.local/share/xfce4/terminal/colorschemes && touch ~/.local/share/xfce4/terminal/colorschemes/Dracula.theme && touch ~/.local/share/xfce/terminal/colorschemes/Alabaster.theme; \
 	cp -r $(CURDIR)/xfce4-terminal/dracula/Dracula.theme ~/.local/share/xfce4/terminal/colorschemes/Dracula.theme
+	cp -r $(CURDIR)/xfce4-terminal/alabaster/Alabaster.theme ~/.local/share/xfce4/terminal/colorschemes/Alabaster.theme
 
 install-zathura:
 	mkdir -p ~/.config/zathura/ && rm -rf ~/.config/zathura/; \
