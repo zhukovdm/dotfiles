@@ -3,4 +3,4 @@
 	url = https://github.com/dracula/vim.git
 [submodule "xfce4-terminal/dracula"]
 	path = xfce4-terminal/dracula
-	url = https://github.com/dracula/xfce4-terminal.git
+	url = https://github.com/zhukovdm/xfce4-terminal-dracula.git
