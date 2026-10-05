@@ -4,7 +4,7 @@ install: install-tmux install-vim install-xfce4-terminal install-zathura
 
 install-tmux:
 	mkdir -p ~/.config/tmux/ && rm -rf ~/.config/tmux/; \
-	cp -r $(CURDIR)/.config/tmux/ ~/.config/tmux/
+	cp -r $(CURDIR)/tmux/ ~/.config/tmux/
 
 install-vim:
 	mkdir -p ~/.vim && rm -rf ~/.vim/ ~/.viminfo ~/.vimrc; \
@@ -16,4 +16,4 @@ install-xfce4-terminal:
 
 install-zathura:
 	mkdir -p ~/.config/zathura/ && rm -rf ~/.config/zathura/; \
-	cp -r $(CURDIR)/.config/zathura/ ~/.config/zathura/
+	cp -r $(CURDIR)/zathura/ ~/.config/zathura/
