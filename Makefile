@@ -8,7 +8,7 @@ install-tmux:
 
 install-vim:
 	mkdir -p ~/.vim && rm -rf ~/.vim/ ~/.viminfo ~/.vimrc; \
-	cp -r $(CURDIR)/.vim/ ~/.vim/
+	cp -r $(CURDIR)/vim/ ~/.vim/
 
 install-xfce4-terminal:
 	mkdir -p ~/.local/share/xfce4/terminal/colorschemes && touch ~/.local/share/xfce4/terminal/colorschemes/Dracula.theme && touch ~/.local/share/xfce/terminal/colorschemes/Alabaster.theme; \
