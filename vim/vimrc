@@ -48,30 +48,36 @@ set termencoding=utf-8
 set fileencoding=utf-8
 set autoindent
 set smarttab
+
+" show specific characters as per specified
 set listchars=eol:¬,tab:▸·,space:·
+
+" show unprintable characters
 " set list
+
 set ignorecase
 set incsearch
 set hlsearch
 set smartcase
+
+" make horizontal split appear below the current window
 set splitbelow
 
 " move .viminfo into ~/.vim/
 set viminfo+=n~/.vim/viminfo
 
-" 
+" enable 24b RGB colors in terminal
 set termguicolors
+
+" Alabaster color theme
+colorscheme alabaster
+highlight ColorColumn ctermfg=NONE ctermbg=255 guifg=NONE guibg=#f0f0f0
 
 " Dracula color theme
 " packadd! dracula
 " let g:dracula_italic=0
 " color dracula
 " colorscheme dracula
-
-" Alabaster color theme
-colorscheme alabaster
-highlight ColorColumn ctermbg=254 guifg=#000000 guibg=#e8e8e8
-
 " highlight ColorColumn ctermbg=7 guibg=#e8e8e8
 " highlight ColorColumn ctermbg=236 guibg=#343746
 
