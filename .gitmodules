@@ -1,9 +1,3 @@
 [submodule "xfce4-terminal/dracula"]
 	path = xfce4-terminal/dracula
 	url = https://github.com/zhukovdm/xfce4-terminal-dracula.git
-[submodule ".vim/pack/dracula/start/dracula"]
-	path = .vim/pack/dracula/start/dracula
-	url = https://github.com/zhukovdm/vim-dracula.git
-[submodule ".vim/pack/alabaster/start/alabaster"]
-	path = .vim/pack/alabaster/start/alabaster
-	url = https://github.com/zhukovdm/alabaster.vim.git
