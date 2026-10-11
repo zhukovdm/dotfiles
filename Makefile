@@ -1,6 +1,9 @@
-.PHONY: install
+XDG_CONFIG_HOME := $(or $(XDG_CONFIG_HOME), $(HOME)/.config/)
+COPY_TO_CONFDIR := tmux uv zathura zed
 
-install-all: install-tmux install-vim install-uv install-xfce4-terminal install-zathura
+.PHONY: install-all
+
+install-all: install-tmux install-vim install-uv install-xfce4-terminal install-zathura install-zed
 
 install-tmux:
 	mkdir -p $(XDG_CONFIG_HOME)/tmux/ && cp -r $(CURDIR)/tmux/* $(XDG_CONFIG_HOME)/tmux/
@@ -18,5 +21,7 @@ install-xfce4-terminal:
 	cp -r $(CURDIR)/xfce4-terminal/alabaster/Alabaster.theme ~/.local/share/xfce4/terminal/colorschemes/Alabaster.theme
 
 install-zathura:
-	mkdir -p ~/.config/zathura/ && rm -rf ~/.config/zathura/; \
-	cp -r $(CURDIR)/zathura/ ~/.config/zathura/
+	mkdir -p "$(XDG_CONFIG_HOME)/zathura/" && cp -r "$(CURDIR)/zathura/." "$(XDG_CONFIG_HOME)/zathura/"
+
+install-zed:
+	mkdir -p "$(XDG_CONFIG_HOME)/zed/" && cp -r "$(CURDIR)/zed/." "$(XDG_CONFIG_HOME)/zed/"
