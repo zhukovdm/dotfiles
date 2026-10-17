@@ -116,4 +116,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# User specific binaries
 . "$HOME/.local/bin/env"
+
+# Rust specific binaries
+. "$HOME/.cargo/env"
+
+# Pi agent
+export PATH="$HOME/.pi/agent/bin:$PATH"
