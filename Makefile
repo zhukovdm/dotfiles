@@ -8,6 +8,9 @@ install-all: install-tmux install-vim install-uv install-xfce4-terminal install-
 install-alacritty:
 	mkdir -p $(XDG_CONFIG_HOME)/alacritty/ && cp -r $(CURDIR)/alacritty/* $(XDG_CONFIG_HOME)/alacritty/
 
+install-bash:
+	cp $(CURDIR)/bash/.bashrc $(XDG_CONFIG_HOME)/.bashrc
+
 install-tmux:
 	mkdir -p $(XDG_CONFIG_HOME)/tmux/ && cp -r $(CURDIR)/tmux/* $(XDG_CONFIG_HOME)/tmux/
 
