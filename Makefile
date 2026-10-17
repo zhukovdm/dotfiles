@@ -1,4 +1,4 @@
-XDG_CONFIG_HOME := $(or $(XDG_CONFIG_HOME), $(HOME)/.config/)
+XDG_CONFIG_HOME := $(or $(XDG_CONFIG_HOME), $(HOME)/.config)
 COPY_TO_CONFDIR := tmux uv zathura zed
 
 .PHONY: install-all
