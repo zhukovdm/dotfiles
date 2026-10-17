@@ -1,0 +1,20 @@
+[window]
+dimensions = { columns = 145, lines = 35 }
+padding = { x = 3, y = 3 }
+
+[general]
+import = [
+    "themes/alabaster.toml"
+]
+
+[keyboard]
+bindings = [
+    { key = "F11", action = "ToggleFullScreen" }
+]
+
+[font]
+size = 10.0
+
+[font.normal]
+family = "Fira Code"
+style = "Retina"

@@ -5,6 +5,9 @@ COPY_TO_CONFDIR := tmux uv zathura zed
 
 install-all: install-tmux install-vim install-uv install-xfce4-terminal install-zathura install-zed
 
+install-alacritty:
+	mkdir -p $(XDG_CONFIG_HOME)/alacritty/ && cp -r $(CURDIR)/alacritty/* $(XDG_CONFIG_HOME)/alacritty/
+
 install-tmux:
 	mkdir -p $(XDG_CONFIG_HOME)/tmux/ && cp -r $(CURDIR)/tmux/* $(XDG_CONFIG_HOME)/tmux/
 
