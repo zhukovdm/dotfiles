@@ -18,6 +18,9 @@ install-vim:
 install-uv:
 	mkdir -p $(XDG_CONFIG_HOME)/uv/ && cp -r $(CURDIR)/uv/* $(XDG_CONFIG_HOME)/uv/
 
+install-xfce4:
+	mkdir -p $(XDG_CONFIG_HOME)/xfce4/ && cp -r $(CURDIR)/xfce4/* $(XDG_CONFIG_HOME)/xfce4/
+
 install-xfce4-terminal:
 	mkdir -p ~/.local/share/xfce4/terminal/colorschemes && touch ~/.local/share/xfce4/terminal/colorschemes/Dracula.theme && touch ~/.local/share/xfce/terminal/colorschemes/Alabaster.theme; \
 	cp -r $(CURDIR)/xfce4-terminal/dracula/Dracula.theme ~/.local/share/xfce4/terminal/colorschemes/Dracula.theme
