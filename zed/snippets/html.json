@@ -4,7 +4,7 @@
     "body": [
       "<div>&bullet; $1",
       "</div>$0"
-    ],
+    ]
   },
   "course": {
     "prefix":"course",
@@ -35,7 +35,7 @@
       "<script>",
       "window.MathJax = {",
       "    tex: {",
-      "        inlineMath: [['$', '$'], ['\\(', '\\)']]",
+      "        inlineMath: [['\\$', '\\$'], ['\\(', '\\)']]",
       "    }",
       "};",
       "</script>",
@@ -43,22 +43,15 @@
       "<div id=\"header\">",
       "<p>",
       "<a href=\"./\">./</a>&emsp;",
-      "<a href=\"https://is.cuni.cz/studium/predmety/index.php?do=predmet&kod=\">uni</a>&emsp;",
+      "<a href=\"$1\">uni</a>&emsp;",
       "</p>",
       "</div>",
       "",
-      "<div id=\"yyyy\">",
+      "<div id=\"$2\">",
       "<hr>",
       "<h1>YYYY</h1>",
       "",
-      "<div id=\"yyyy-01\">",
-      "<hr>",
-      "<h2>01</h2>",
-      "",
-      "",
-      "",
-      "<div style=\"display: flex; justify-content: center; width: 100%;\"><a href=\"#yyyy\">&Uparrow;</a></div>",
-      "</div>",
+      "$0",
       "",
       "</div>",
       "",
@@ -69,7 +62,20 @@
       "",
       "</body>",
       "</html>",
+      ""
+    ]
+  },
+  "lecture": {
+    "prefix": "lecture",
+    "body": [
+      "<div id=\"$1-01\">",
+      "<hr>",
+      "<h2>01</h2>",
       "",
+      "$0",
+      "",
+      "<div style=\"display: flex; justify-content: center; width: 100%;\"><a href=\"#$2\">&Uparrow;</a></div>",
+      "</div>"
     ]
   },
   "details": {
@@ -79,7 +85,7 @@
       "</summary>",
       "<p>$0</p>",
       "</details>"
-    ],
+    ]
   },
   "uparrow": {
     "prefix": "uparrow",
