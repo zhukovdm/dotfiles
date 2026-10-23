@@ -37,7 +37,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+    xterm-color|*-256color|alacritty) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -76,8 +76,6 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
-    alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -124,3 +122,14 @@ fi
 
 # Pi agent
 export PATH="$HOME/.pi/agent/bin:$PATH"
+
+# hand over interactive sessions to fish
+if [[ $- == *i* && -z "$NO_FISH_BASH" && -z "$BASH_EXECUTION_STRING" && -z "$IN_NIX_SHELL" ]]; then
+    if command -v fish >/dev/null 2>&1; then
+        if shopt -q login_shell; then
+            exec fish --login
+        else
+            exec fish
+        fi
+    fi
+fi
