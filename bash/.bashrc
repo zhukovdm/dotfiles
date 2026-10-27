@@ -115,8 +115,21 @@ fi
 # Rust specific binaries
 . "$HOME/.cargo/env"
 
-# Pi agent
+# Pi Agent
 export PATH="$HOME/.pi/agent/bin:$PATH"
+
+# NVM
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# Environment Variables
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 # hand over interactive sessions to fish
 if [[ $- == *i* && -z "$NO_FISH_BASH" && -z "$BASH_EXECUTION_STRING" && -z "$IN_NIX_SHELL" ]]; then
