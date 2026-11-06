@@ -51,6 +51,10 @@
     "tab": "▸",
   },
   "languages": {
+    "HTML": {
+      "tab_size": 2,
+      "hard_tabs": false,
+    },
     "JSON": {
       "tab_size": 2,
       "hard_tabs": false,
